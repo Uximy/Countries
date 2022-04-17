@@ -1,7 +1,7 @@
 <?php
     const countries = 'countries.txt';
 
-    const dictionary = 'dictionary.txt';
+    const dictionary = 'dictionary_cities.txt';
 
     $country = $_POST['country'] ?? '';
 
