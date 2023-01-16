@@ -59,14 +59,15 @@
     <span style="color: <?=$color?>"><?= $result ?></span>
     <br>
     <br>
-    <select>
-        <?php
-            $fp = file(countries, FILE_SKIP_EMPTY_LINES);
-
+    <?php
+        $fp = file(countries, FILE_SKIP_EMPTY_LINES);
+        if (!$fp == 0) {
+            echo "<select>";
             foreach ($fp as $key => $data)  {
                 echo "<option>$key. $data</option>";
             }
-        ?> 
-    </select>
+            echo "</select>";
+        }  
+    ?> 
 </body>
 </html>
